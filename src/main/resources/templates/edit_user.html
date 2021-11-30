@@ -21,18 +21,18 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="../../index2.html"><b>Office</b>Planner</a>
+        <a href=""><b>Office</b>Planner</a>
     </div>
 
     <div class="card"  >
         <div class="card-body register-card-body">
             <p class="login-box-msg">Edit User</p>
 
-            <form action="../../index.html" th:action="@{/update_user}" method="post"
+            <form  th:action="@{/update_user}" method="post"
                   th:object="${user}">
                 <input type="hidden" th:field="*{id}">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" th:field="*{firstname}" placeholder="First name" required>
+                    <input type="text" class="form-control" th:field="*{firstname}">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" th:field="*{lastname}"  placeholder="Last name" required>
+                    <input type="text" class="form-control" th:field="*{lastname}" >
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" th:field="*{email}"  placeholder="Email" required>
+                    <input type="email" class="form-control" th:field="*{email}">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" th:field="*{password}"  placeholder="Password" required>
+                    <input type="password" class="form-control" th:field="*{password}">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>

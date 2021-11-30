@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ResourceRepository extends JpaRepository <Resource, Long > {
 
-        @Query("SELECT r FROM Resource r WHERE r.id = ?1")
+        @Query("SELECT rs FROM Resource rs WHERE rs.id = ?1")
         public Resource getResourceById(@Param("rsc_id")Long id);
 
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Meeting Set</title>
+
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+
+</nav>
+
+<div class="container">
+    <h2 class="mt-5 mb-4">Meeting Scheduled</h2>
+
+    <p><label>Title: </label> <strong th:text="${meeting.meeting_type}"></strong></p>
+    <p><label>Description: </label> <strong th:text="${meeting.meeting_description}"></strong></p>
+    <p><label>Room: </label> <strong th:text="${meeting.room}"></strong></p>
+    <p><label>Start Date: </label> <strong th:text="${meeting.start_date}"></strong></p>
+    <p><label>Start Time: </label> <strong th:text="${meeting.start_time}"></strong></p>
+    <p><label>End Date: </label> <strong th:text="${meeting.end_date}"></strong></p>
+    <p><label>End Time: </label> <strong th:text="${meeting.end_time}"></strong></p>
+    <p><label>Recurrence: </label> <strong th:text="${meeting.recurrence}"></strong></p>
+    <a th:href="@{/add_meeting}" class="btn btn-primary">Go back</a>
+    <br>
+    <a th:href="@{/meetings}" class="btn btn-primary">Confirm</a>
+
+</div>
+
+</body>
+</html>

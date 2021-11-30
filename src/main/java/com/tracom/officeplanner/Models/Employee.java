@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false, insertable = false, updatable = false)
     private Long id;
     @Column(name = "emp_id", unique = true)
     private Integer emp_id;
@@ -19,24 +19,31 @@ public class Employee {
     private String emp_email;
     @Column(name = "password", unique = true, nullable = false)
     private String password;
-    @Column(name = "category")
-    private String category;
     @Column(name = "phone_number", unique = true, nullable = false)
     private String phone_number;
-//    @ManyToOne
-//    @JoinColumn(name="org_id", nullable = false)
-//    private Organization organization;
+    private String gender;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name="org_id", nullable = false)
+    private Organization organization;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name="d_id", nullable = false)
+    private Department department;
+
     public Employee(){
     }
 
-    public Employee(Integer emp_id, String emp_firstname, String emp_lastname, String emp_email, String password, String category, String phone_number) {
+    public Employee(Integer emp_id, String emp_firstname, String emp_lastname, String emp_email, String password, Department department, String phone_number, String gender, Organization organization) {
         this.emp_id = emp_id;
         this.emp_firstname = emp_firstname;
         this.emp_lastname = emp_lastname;
         this.emp_email = emp_email;
         this.password = password;
-        this.category = category;
+        this.department = department;
         this.phone_number = phone_number;
+        this.organization=organization;
+        this.gender=gender;
     }
 
     public Long getId() {
@@ -87,12 +94,12 @@ public class Employee {
         this.password = password;
     }
 
-    public String getCategory() {
-        return category;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     public String getPhone_number() {
@@ -103,13 +110,21 @@ public class Employee {
         this.phone_number = phone_number;
     }
 
-//    public Organization getOrganization() {
-//        return organization;
-//    }
-//
-//    public void setOrganization(Organization organization) {
-//        this.organization = organization;
-//    }
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Organization getOrganization() {
+        return organization;
+    }
+
+    public void setOrganization(Organization organization) {
+        this.organization = organization;
+    }
 
     @Override
     public String toString() {
@@ -120,10 +135,10 @@ public class Employee {
                 ", emp_lastname='" + emp_lastname + '\'' +
                 ", emp_email='" + emp_email + '\'' +
                 ", password='" + password + '\'' +
-                ", category='" + category + '\'' +
                 ", phone_number='" + phone_number + '\'' +
-//                ", organization=" + organization +
+                ", gender='" + gender + '\'' +
+                ", organization=" + organization +
+                ", department=" + department +
                 '}';
     }
-
 }

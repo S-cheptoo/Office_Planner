@@ -1,8 +1,12 @@
 package com.tracom.officeplanner.Controllers;
 
+import com.tracom.officeplanner.Models.Department;
 import com.tracom.officeplanner.Models.Employee;
+import com.tracom.officeplanner.Models.Organization;
 import com.tracom.officeplanner.Repository.EmployeeRepository;
+import com.tracom.officeplanner.Services.DepartmentService;
 import com.tracom.officeplanner.Services.EmployeeService;
+import com.tracom.officeplanner.Services.OrganizationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +19,12 @@ import java.util.List;
 public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
-
     @Autowired
     private EmployeeService employeeService;
+    @Autowired
+    private OrganizationService organizationService;
+    @Autowired
+    private DepartmentService departmentService;
 
     @GetMapping("/employees")
     public String getEmployeesPage(Model model) {
@@ -27,6 +34,12 @@ public class EmployeeController {
 
     @GetMapping("/add_employees")
     public String getAddEmployee(Model model){
+        List<Organization> listOrganizations = organizationService.listOrganizations();
+        model.addAttribute("organizations", listOrganizations);
+
+        List<Department> listDepartments = departmentService.listDepartments();
+        model.addAttribute("departments", listDepartments);
+
         model.addAttribute("employee", new Employee());
         return "add_employee";
     }

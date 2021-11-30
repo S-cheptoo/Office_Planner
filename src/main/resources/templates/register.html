@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Registration Page</title>
+    <title>Office Planner| Registration Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,14 +21,14 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="../../index2.html"><b>Office</b>Planner</a>
+        <a href=" "><b>Office</b>Planner</a>
     </div>
 
     <div class="card"  >
         <div class="card-body register-card-body">
             <p class="login-box-msg">Register a new membership</p>
 
-            <form action="../../index.html" th:action="@{/register_user}" method="post"
+            <form th:action="@{/register_user}" method="post"
                   th:object="${user}">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" th:field="*{firstname}" placeholder="First name" required>
@@ -88,7 +88,7 @@
                 </div>
             </form>
 
-            <a href="login.html" class="text-center" th:href="@{/login}">Already have an account?</a>
+            <a class="text-center" th:href="@{/login}">Already have an account?</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->

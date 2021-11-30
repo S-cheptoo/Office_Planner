@@ -2,6 +2,7 @@ package com.tracom.officeplanner.Models;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 
@@ -26,6 +27,15 @@ public class User {
     @Column(nullable = false, length = 50, name = "lastname")
     private String lastname;
 
+    @Column(name="verification_code")
+    private String verificationCode;
+
+    private boolean enabled;
+
+    @Column(name="reset_password_token", nullable = true)
+    private String resetPasswordToken;
+    
+
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",
@@ -33,6 +43,24 @@ public class User {
             inverseJoinColumns = @JoinColumn(name="role_id"))
 
     private Set<Role> roles=new HashSet<>();
+
+    @Transient
+    public String getFullName() {
+        return firstname + " " +lastname;
+    }
+
+    public boolean hasRole(String name) {
+        Iterator<Role> iterator = this.roles.iterator();
+        while (iterator.hasNext()) {
+            Role role = iterator.next();
+            if (role.getName().equals(name)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
     public void addRole(Role role){
         this.roles.add(role);
@@ -86,6 +114,30 @@ public class User {
         this.roles = roles;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getVerificationCode() {
+        return verificationCode;
+    }
+
+    public void setVerificationCode(String verificationCode) {
+        this.verificationCode = verificationCode;
+    }
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -94,6 +146,9 @@ public class User {
                 ", password='" + password + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", verificationCode='" + verificationCode + '\'' +
+                ", enabled=" + enabled +
+                ", resetPasswordToken='" + resetPasswordToken + '\'' +
                 ", roles=" + roles +
                 '}';
     }

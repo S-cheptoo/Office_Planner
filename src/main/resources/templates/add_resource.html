@@ -31,6 +31,14 @@
                     <input type="text" class ="form-control"  th:field="*{resource_description}" required/>
                 </div>
             </div>
+            <div class="form-group row m-3">
+                <label class="col-form-label col-4">Select Room:</label>
+                <div class="col-8">
+                    <select class="form-control" th:field="*{room}" required>
+                        <option th:each="room : ${rooms}" th:value="${room.id}" th:text="${room.name}"/>
+                    </select>
+                </div>
+            </div>
             <div>
                 <button class="btn btn-primary" type="submit">Save</button>
             </div>
@@ -38,7 +46,9 @@
     </div>
 
 </div>
+<div>
 <div th:replace="fragments/footer :: footer"></div>
+</div>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->

@@ -71,8 +71,9 @@
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">First Name</th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Last Name</th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Email</th>
-                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Category</th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Department</th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Phone Number</th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Gender</th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Edit</th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Delete</th>
                         </tr>
@@ -80,12 +81,13 @@
                         <tbody>
                         <tr th:each="employee:${employees}">
                             <td th:text="${employee.getId()}">ID</td>
-                            <td th:text="$employee.getEmp_id()}">Name</td>
+                            <td th:text="$employee.getEmp_id()}">Employee ID</td>
                             <td th:text="${employee.getEmp_firstname()}">First Name</td>
                             <td th:text="${employee.getEmp_lastname()}">Last Name</td>
-                            <td th:text="${employee.getEmp_email()}">First Name</td>
-                            <td th:text="${employee.getCategory()}">Category</td>
+                            <td th:text="${employee.getEmp_email()}">Email</td>
+                            <td th:text="${employee.getDepartment()}">Department</td>
                             <td th:text="${employee.getPhone_number()}">Phone Number</td>
+                            <td th:text="${employee.getGender()}">Department</td>
                             <td>
                                 <a th:href="@{'/edit_employee/' + ${employee.getId()}}" onclick="return confirm('Are you sure you want to edit the Employee details?')"><button style='font-size:16px;color:blue'>Edit <i class='fas fa-edit'></i></button></a></td>
                             <td>
@@ -101,8 +103,9 @@
                             <th rowspan="1" colspan="1" style="">First Name</th>
                             <th rowspan="1" colspan="1" style="">Last Name</th>
                             <th rowspan="1" colspan="1" style="">Email</th>
-                            <th rowspan="1" colspan="1" style="">Category</th>
+                            <th rowspan="1" colspan="1" style="">Department</th>
                             <th rowspan="1" colspan="1" style="">Phone Number</th>
+                            <th rowspan="1" colspan="1" style="">Gender</th>
                             <th rowspan="1" colspan="1" style="">Edit</th>
                             <th rowspan="1" colspan="1" style="">Delete</th>
                         </tr>
@@ -158,7 +161,7 @@
 </div>
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<!--<script src="../../plugins/jquery/jquery.min.js"></script>-->
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->

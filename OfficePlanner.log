@@ -1,0 +1,839 @@
+2021-11-30 10:07:57.182  INFO 7352 --- [main] c.t.o.OfficeplannerApplication           : Starting OfficeplannerApplication using Java 11.0.10 on DESKTOP-NV2AE2U with PID 7352 (C:\Users\rbett\officeplanner\target\classes started by icodeio in C:\Users\rbett\officeplanner)
+2021-11-30 10:07:57.186  INFO 7352 --- [main] c.t.o.OfficeplannerApplication           : No active profile set, falling back to default profiles: default
+2021-11-30 10:07:58.360  INFO 7352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-30 10:07:58.485  INFO 7352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 9 JPA repository interfaces.
+2021-11-30 10:07:59.325  INFO 7352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-30 10:07:59.346  INFO 7352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-30 10:07:59.347  INFO 7352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-30 10:07:59.613  INFO 7352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-30 10:07:59.613  INFO 7352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2362 ms
+2021-11-30 10:07:59.662 DEBUG 7352 --- [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2021-11-30 10:08:00.335  INFO 7352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-30 10:08:00.538  INFO 7352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-30 10:08:01.942  INFO 7352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-30 10:08:03.544  INFO 7352 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@634d3439, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f3c7b24, org.springframework.security.web.header.HeaderWriterFilter@7cadf3ca, org.springframework.security.web.authentication.logout.LogoutFilter@54780c40, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b74a67a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cb53bfc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44428583, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44e0c3d, org.springframework.security.web.session.SessionManagementFilter@737445ab, org.springframework.security.web.access.ExceptionTranslationFilter@11939a9f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4946dfde]
+2021-11-30 10:08:03.767 DEBUG 7352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-30 10:08:03.882 DEBUG 7352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 52 mappings in 'requestMappingHandlerMapping'
+2021-11-30 10:08:04.656 DEBUG 7352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-30 10:08:04.673 DEBUG 7352 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-30 10:08:04.873  INFO 7352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-30 10:08:04.893  INFO 7352 --- [main] c.t.o.OfficeplannerApplication           : Started OfficeplannerApplication in 8.4 seconds (JVM running for 10.127)
+2021-11-30 10:09:28.271  INFO 7352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-30 10:09:28.271  INFO 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-30 10:09:28.271 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-11-30 10:09:28.271 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-11-30 10:09:28.271 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-11-30 10:09:28.279 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@501b296a
+2021-11-30 10:09:28.279 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7ef3aa21
+2021-11-30 10:09:28.279 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-11-30 10:09:28.279  INFO 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-11-30 10:09:28.311 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /register
+2021-11-30 10:09:28.335 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /register
+2021-11-30 10:09:28.343 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register", parameters={}
+2021-11-30 10:09:28.351 DEBUG 7352 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getUserRegistration(Model)
+2021-11-30 10:09:28.423 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:09:29.198 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:29.392 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:09:29.393 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:09:29.393 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:09:29.394 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:09:29.395 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:09:29.395 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:09:29.397 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:09:29.401 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:09:29.404 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:29.404 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:09:29.404 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:09:29.405 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:29.410 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:09:29.410 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:09:29.405 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:09:29.408 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:29.437 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:29.449 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:09:29.448 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:09:32.000 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:09:29.449 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:09:29.447 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.001 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:09:32.004 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:32.005 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:29.541 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.014 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.014 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.015 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:32.042 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.494 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:09:32.495 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:09:32.496 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:09:32.498 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:32.520 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.885 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:09:32.887 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:09:32.888 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:09:32.891 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:32.897 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:09:32.946 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:09:32.947 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:09:32.949 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:09:32.951 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:09:32.955 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:08.597 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /register_user
+2021-11-30 10:10:08.605 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /register_user
+2021-11-30 10:10:08.605 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/register_user", parameters={masked}
+2021-11-30 10:10:08.605 DEBUG 7352 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#registerUser(User, HttpServletRequest)
+2021-11-30 10:10:09.061 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+2021-11-30 10:10:09.069 ERROR 7352 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com] with root cause
+
+java.net.UnknownHostException: smtp.gmail.com
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:220) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:608) ~[na:na]
+	at com.sun.mail.util.WriteTimeoutSocket.connect(WriteTimeoutSocket.java:91) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:333) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:214) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2160) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:722) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.10.jar:5.3.10]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.10.jar:5.3.10]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.3.10.jar:5.3.10]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.3.10.jar:5.3.10]
+	at com.tracom.officeplanner.Services.UserService.sendVerificationEmail(UserService.java:74) ~[classes/:na]
+	at com.tracom.officeplanner.Services.UserService.register(UserService.java:46) ~[classes/:na]
+	at com.tracom.officeplanner.Services.UserService$$FastClassBySpringCGLIB$$83ed74f5.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.10.jar:5.3.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.10.jar:5.3.10]
+	at com.tracom.officeplanner.Services.UserService$$EnhancerBySpringCGLIB$$8195d087.register(<generated>) ~[classes/:na]
+	at com.tracom.officeplanner.Controllers.AppController.registerUser(AppController.java:174) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:67) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.2.jar:5.5.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-11-30 10:10:09.077 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /error
+2021-11-30 10:10:09.077 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /error
+2021-11-30 10:10:09.077 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={masked}
+2021-11-30 10:10:09.077 DEBUG 7352 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2021-11-30 10:10:09.109 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2021-11-30 10:10:09.109 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2021-11-30 10:10:26.166 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /register
+2021-11-30 10:10:26.174 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /register
+2021-11-30 10:10:26.174 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register", parameters={}
+2021-11-30 10:10:26.174 DEBUG 7352 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getUserRegistration(Model)
+2021-11-30 10:10:26.174 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:10:26.190 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:26.358 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:10:26.358 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:10:26.358 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:10:26.358 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:26.374 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:10:26.382 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:10:26.382 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:10:26.398 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:10:26.398 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:10:26.390 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:10:26.406 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:10:26.406 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:10:26.406 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:26.414 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:26.414 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:26.430 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:26.478 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:26.454 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:10:26.422 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:26.486 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:10:26.494 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:26.502 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:26.502 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:27.443 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:10:27.444 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:10:27.445 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:10:27.447 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:27.457 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:27.695 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:10:27.695 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:10:27.696 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:10:27.697 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:27.701 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:27.768 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:10:27.769 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:10:27.770 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:10:27.771 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:27.775 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:46.523 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /register_user
+2021-11-30 10:10:46.523 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /register_user
+2021-11-30 10:10:46.523 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/register_user", parameters={masked}
+2021-11-30 10:10:46.523 DEBUG 7352 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#registerUser(User, HttpServletRequest)
+2021-11-30 10:10:51.759 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2021-11-30 10:10:51.762 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2021-11-30 10:10:51.772 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /register_success
+2021-11-30 10:10:51.774 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /register_success
+2021-11-30 10:10:51.774 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register_success", parameters={}
+2021-11-30 10:10:51.775 DEBUG 7352 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getRegistrationSuccess(Model)
+2021-11-30 10:10:51.779 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:10:51.788 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.171 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
+2021-11-30 10:10:58.174 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
+2021-11-30 10:10:58.174 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2021-11-30 10:10:58.176 DEBUG 7352 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 10:10:58.179 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:10:58.235 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.373 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:10:58.373 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:10:58.373 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:10:58.373 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:10:58.381 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.389 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.389 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.397 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.413 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:10:58.413 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:10:58.413 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:10:58.421 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:10:58.413 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:10:58.421 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:10:58.421 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.429 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.437 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.437 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.437 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.445 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.709 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:10:58.709 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:10:58.709 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:10:58.709 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.725 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.789 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:10:58.789 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:10:58.789 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:10:58.789 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.797 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:10:58.805 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:10:58.805 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:10:58.805 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:10:58.813 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:10:58.813 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:32.768 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /verify?code=NVUuoXZQcbTv7ZMmhJHeEvZfMi5rdd5khvZBvUyoAQImCxpkUvKc9Bem8m0zVteP
+2021-11-30 10:11:32.769 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /verify?code=NVUuoXZQcbTv7ZMmhJHeEvZfMi5rdd5khvZBvUyoAQImCxpkUvKc9Bem8m0zVteP
+2021-11-30 10:11:32.770 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/verify?code=NVUuoXZQcbTv7ZMmhJHeEvZfMi5rdd5khvZBvUyoAQImCxpkUvKc9Bem8m0zVteP", parameters={masked}
+2021-11-30 10:11:32.770 DEBUG 7352 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#verifyUser(String, Model)
+2021-11-30 10:11:32.830 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:11:32.835 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.440 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
+2021-11-30 10:11:35.441 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
+2021-11-30 10:11:35.444 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2021-11-30 10:11:35.445 DEBUG 7352 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 10:11:35.448 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:11:35.459 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.576 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:11:35.577 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:11:35.577 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:11:35.579 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:35.585 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.594 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:11:35.595 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:11:35.595 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:11:35.597 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:35.598 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:11:35.599 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:11:35.599 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:11:35.601 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:35.603 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.615 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:11:35.619 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:11:35.620 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:11:35.627 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:35.633 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:11:35.635 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:11:35.635 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:11:35.662 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.646 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.669 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:11:35.669 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:11:35.669 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:11:35.671 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:35.680 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:35.638 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:35.700 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:39.772 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:11:39.773 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:11:39.773 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:11:39.775 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:39.778 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:39.912 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:11:39.913 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:11:39.913 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:11:39.965 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:39.968 DEBUG 7352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:40.030 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:11:40.031 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:11:40.031 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:11:40.032 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:40.035 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:55.897 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /login
+2021-11-30 10:11:57.328  WARN 7352 --- [http-nio-8080-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [709] milliseconds.
+2021-11-30 10:11:57.342 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2021-11-30 10:11:57.343 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2021-11-30 10:11:57.343 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/login?error", parameters={masked}
+2021-11-30 10:11:57.343 DEBUG 7352 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 10:11:57.345 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:11:57.354 DEBUG 7352 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.470 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:11:57.472 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:11:57.472 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:11:57.474 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.482 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:11:57.487 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:11:57.487 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:11:57.488 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.489 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:11:57.489 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:11:57.491 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:11:57.491 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:11:57.491 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:11:57.489 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.491 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:11:57.492 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:11:57.488 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:11:57.492 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.492 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:11:57.493 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:11:57.493 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.491 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:11:57.494 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.494 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:11:57.495 DEBUG 7352 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.495 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.498 DEBUG 7352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.504 DEBUG 7352 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.506 DEBUG 7352 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.557 DEBUG 7352 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.845 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:11:57.846 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:11:57.846 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:11:57.848 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.853 DEBUG 7352 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.910 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:11:57.912 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:11:57.912 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:11:57.912 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.915 DEBUG 7352 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:11:57.929 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:11:57.929 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:11:57.930 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:11:57.930 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:11:57.932 DEBUG 7352 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:22:53.152  INFO 11540 --- [main] c.t.o.OfficeplannerApplication           : Starting OfficeplannerApplication using Java 11.0.10 on DESKTOP-NV2AE2U with PID 11540 (C:\Users\rbett\officeplanner\target\classes started by icodeio in C:\Users\rbett\officeplanner)
+2021-11-30 10:22:53.152  INFO 11540 --- [main] c.t.o.OfficeplannerApplication           : No active profile set, falling back to default profiles: default
+2021-11-30 10:22:54.328  INFO 11540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-30 10:22:54.459  INFO 11540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 9 JPA repository interfaces.
+2021-11-30 10:22:55.186  INFO 11540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-30 10:22:55.202  INFO 11540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-30 10:22:55.202  INFO 11540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-11-30 10:22:55.405  INFO 11540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-30 10:22:55.421  INFO 11540 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2191 ms
+2021-11-30 10:22:55.468 DEBUG 11540 --- [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2021-11-30 10:22:56.014  INFO 11540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-30 10:22:56.187  INFO 11540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-30 10:22:57.540  INFO 11540 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-30 10:22:59.013  INFO 11540 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@152dbf8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@703a2bc9, org.springframework.security.web.header.HeaderWriterFilter@95f1422, org.springframework.security.web.authentication.logout.LogoutFilter@265c0752, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e2d9923, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@346e5cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34fcc5e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34ea86ff, org.springframework.security.web.session.SessionManagementFilter@47fc9ce, org.springframework.security.web.access.ExceptionTranslationFilter@34c6b52e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55e88bc]
+2021-11-30 10:22:59.251 DEBUG 11540 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-11-30 10:22:59.428 DEBUG 11540 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 52 mappings in 'requestMappingHandlerMapping'
+2021-11-30 10:23:00.293 DEBUG 11540 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-11-30 10:23:00.309 DEBUG 11540 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-11-30 10:23:00.512  INFO 11540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-30 10:23:00.527  INFO 11540 --- [main] c.t.o.OfficeplannerApplication           : Started OfficeplannerApplication in 8.103 seconds (JVM running for 10.531)
+2021-11-30 10:24:51.935  INFO 11540 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-30 10:24:51.936  INFO 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-30 10:24:51.937 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-11-30 10:24:51.937 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-11-30 10:24:51.938 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-11-30 10:24:51.939 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7fb1820d
+2021-11-30 10:24:51.940 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@35b79b1f
+2021-11-30 10:24:51.940 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-11-30 10:24:51.941  INFO 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-11-30 10:24:51.955 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /register
+2021-11-30 10:24:51.973 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /register
+2021-11-30 10:24:51.977 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register", parameters={}
+2021-11-30 10:24:51.982 DEBUG 11540 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getUserRegistration(Model)
+2021-11-30 10:24:52.026 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:24:52.468 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:52.642 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:24:52.645 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:24:52.642 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:24:52.646 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:24:52.647 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:24:52.648 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:24:52.648 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:24:52.642 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:24:52.650 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:24:52.650 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:24:52.651 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:24:52.651 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:24:52.645 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:24:52.652 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:24:52.643 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:24:52.653 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:24:52.656 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:24:52.656 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:24:52.659 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:52.659 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:52.659 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:52.660 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:52.662 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:52.660 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:52.711 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:52.727 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:52.727 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:52.747 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:52.765 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:52.804 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:53.295 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:24:53.303 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:24:53.303 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:24:53.303 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:53.327 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:53.439 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:24:53.439 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:24:53.439 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:24:53.447 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:53.455 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:24:53.471 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:24:53.471 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:24:53.471 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:24:53.471 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:24:53.479 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:25:54.479 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /register_user
+2021-11-30 10:25:54.481 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /register_user
+2021-11-30 10:25:54.483 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/register_user", parameters={masked}
+2021-11-30 10:25:54.484 DEBUG 11540 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#registerUser(User, HttpServletRequest)
+2021-11-30 10:26:00.139 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2021-11-30 10:26:00.142 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2021-11-30 10:26:00.152 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /register_success
+2021-11-30 10:26:00.153 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /register_success
+2021-11-30 10:26:00.153 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register_success", parameters={}
+2021-11-30 10:26:00.154 DEBUG 11540 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getRegistrationSuccess(Model)
+2021-11-30 10:26:00.155 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:26:00.163 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:26:34.434 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /verify?code=OG64o4Hd39iELoH0Yz1eE3qzJjtbifG8mRVXWyXC2VYvMI4CVv020yZCC2lqK3WG
+2021-11-30 10:26:34.436 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /verify?code=OG64o4Hd39iELoH0Yz1eE3qzJjtbifG8mRVXWyXC2VYvMI4CVv020yZCC2lqK3WG
+2021-11-30 10:26:34.437 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/verify?code=OG64o4Hd39iELoH0Yz1eE3qzJjtbifG8mRVXWyXC2VYvMI4CVv020yZCC2lqK3WG", parameters={masked}
+2021-11-30 10:26:34.438 DEBUG 11540 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#verifyUser(String, Model)
+2021-11-30 10:26:34.455 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:26:34.470 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:21.963 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /verify?code=IVBGrfQ0rPUieyWANNtToNBAwKQqmaP5daO1TtBFZ74G56OhrQ4Y7zGoLBsybCbh
+2021-11-30 10:27:21.966 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /verify?code=IVBGrfQ0rPUieyWANNtToNBAwKQqmaP5daO1TtBFZ74G56OhrQ4Y7zGoLBsybCbh
+2021-11-30 10:27:21.968 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/verify?code=IVBGrfQ0rPUieyWANNtToNBAwKQqmaP5daO1TtBFZ74G56OhrQ4Y7zGoLBsybCbh", parameters={masked}
+2021-11-30 10:27:21.969 DEBUG 11540 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#verifyUser(String, Model)
+2021-11-30 10:27:22.024 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:27:22.035 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:25.581 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
+2021-11-30 10:27:25.583 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
+2021-11-30 10:27:25.583 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2021-11-30 10:27:25.584 DEBUG 11540 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 10:27:25.587 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:27:25.631 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:25.753 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:27:25.769 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:27:25.761 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:27:25.761 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:27:25.769 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:25.761 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:27:27.204 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:27:27.205 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.206 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.225 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:27.231 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:25.777 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:27:27.233 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.246 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:25.785 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:27:27.254 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.271 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:25.785 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:27.277 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:27:27.279 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:27:27.280 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:27:27.282 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.291 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:27.777 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:27:27.778 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:27:27.778 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:27:27.779 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.783 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:27.897 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:27:27.898 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:27:27.898 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:27:27.899 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.906 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:27:27.934 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:27:27.935 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:27:27.936 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:27:27.938 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:27:27.949 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:42.290 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /login
+2021-11-30 10:28:43.597  WARN 11540 --- [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [686] milliseconds.
+2021-11-30 10:28:43.613 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2021-11-30 10:28:43.613 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2021-11-30 10:28:43.613 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/login?error", parameters={masked}
+2021-11-30 10:28:43.621 DEBUG 11540 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 10:28:43.621 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:28:43.629 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:43.757 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:28:43.781 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:43.781 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:28:43.773 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.421 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:28:44.421 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.421 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:28:44.421 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:43.781 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:28:44.429 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.429 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:44.437 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:43.789 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:28:44.437 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:28:44.437 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:28:44.429 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:28:44.445 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.445 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:28:44.445 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.453 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:44.453 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:44.730 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:28:44.731 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:28:44.731 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:28:44.733 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.738 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:44.901 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:28:44.902 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:28:44.903 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:28:44.904 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.908 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:28:44.965 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:28:44.966 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:28:44.966 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:28:44.968 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:28:44.975 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.460 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /login
+2021-11-30 10:32:34.692 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2021-11-30 10:32:34.692 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2021-11-30 10:32:34.692 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/login?error", parameters={masked}
+2021-11-30 10:32:34.692 DEBUG 11540 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 10:32:34.692 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 10:32:34.700 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:34.852 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.836 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 10:32:34.868 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 10:32:34.868 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:34.876 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:34.892 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.892 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.892 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.820 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:32:34.828 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 10:32:34.892 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 10:32:34.900 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:34.892 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 10:32:34.900 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 10:32:34.900 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:34.900 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:34.908 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:35.249 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:32:35.254 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 10:32:35.254 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 10:32:35.255 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:35.258 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:35.344 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:32:35.345 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 10:32:35.346 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 10:32:35.347 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:35.349 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 10:32:35.363 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:32:35.364 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 10:32:35.364 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 10:32:35.365 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 10:32:35.367 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:10.274 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /login?error
+2021-11-30 14:55:10.295 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /login?error
+2021-11-30 14:55:10.298 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/login?error", parameters={masked}
+2021-11-30 14:55:10.303 DEBUG 11540 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 14:55:10.332 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 14:55:10.392 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:11.080 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 14:55:11.081 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 14:55:11.081 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 14:55:11.087 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:11.130 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:11.287 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 14:55:11.287 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 14:55:11.287 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 14:55:11.287 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:11.303 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:11.319 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 14:55:11.319 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 14:55:13.530 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 14:55:13.534 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:12.399 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 14:55:13.537 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 14:55:13.537 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 14:55:12.416 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 14:55:13.539 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:13.540 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 14:55:13.540 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 14:55:13.545 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:13.559 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:13.574 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:13.594 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:13.823 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 14:55:13.823 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 14:55:13.823 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 14:55:13.831 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:13.967 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:14.719 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 14:55:14.719 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 14:55:14.719 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 14:55:14.719 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:14.727 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:14.932 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 14:55:14.933 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 14:55:14.933 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 14:55:14.935 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:14.938 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:14.978 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 14:55:14.978 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 14:55:14.978 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 14:55:14.980 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:14.986 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:15.029 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2021-11-30 14:55:15.030 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2021-11-30 14:55:15.031 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2021-11-30 14:55:17.746 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:17.765 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2021-11-30 14:55:17.770 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-11-30 14:55:17.864 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-11-30 14:55:17.865 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-11-30 14:55:17.866 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2021-11-30 14:55:17.886 DEBUG 11540 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-11-30 14:55:18.094 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-11-30 14:55:18.101 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Tue Nov 30 14:55:17 EAT 2021, status=404, error=Not Found, path=/favicon.ico}]
+2021-11-30 14:55:18.440 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2021-11-30 14:55:19.961 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /verify?code=NVUuoXZQcbTv7ZMmhJHeEvZfMi5rdd5khvZBvUyoAQImCxpkUvKc9Bem8m0zVteP
+2021-11-30 14:55:19.963 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /verify?code=NVUuoXZQcbTv7ZMmhJHeEvZfMi5rdd5khvZBvUyoAQImCxpkUvKc9Bem8m0zVteP
+2021-11-30 14:55:19.964 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/verify?code=NVUuoXZQcbTv7ZMmhJHeEvZfMi5rdd5khvZBvUyoAQImCxpkUvKc9Bem8m0zVteP", parameters={masked}
+2021-11-30 14:55:19.964 DEBUG 11540 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#verifyUser(String, Model)
+2021-11-30 14:55:20.014 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 14:55:20.016 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:26.397 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /verify?code=OG64o4Hd39iELoH0Yz1eE3qzJjtbifG8mRVXWyXC2VYvMI4CVv020yZCC2lqK3WG
+2021-11-30 14:55:26.405 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /verify?code=OG64o4Hd39iELoH0Yz1eE3qzJjtbifG8mRVXWyXC2VYvMI4CVv020yZCC2lqK3WG
+2021-11-30 14:55:26.405 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/verify?code=OG64o4Hd39iELoH0Yz1eE3qzJjtbifG8mRVXWyXC2VYvMI4CVv020yZCC2lqK3WG", parameters={masked}
+2021-11-30 14:55:26.405 DEBUG 11540 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#verifyUser(String, Model)
+2021-11-30 14:55:26.429 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 14:55:26.429 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:27.140 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /login
+2021-11-30 14:55:27.140 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /login
+2021-11-30 14:55:27.140 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2021-11-30 14:55:27.140 DEBUG 11540 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.tracom.officeplanner.Controllers.AppController#getLoginPage(Model)
+2021-11-30 14:55:27.140 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2021-11-30 14:55:27.156 DEBUG 11540 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:27.319 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 14:55:27.320 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/css/all.min.css
+2021-11-30 14:55:27.323 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/css/all.min.css", parameters={}
+2021-11-30 14:55:27.326 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:27.329 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 14:55:27.333 DEBUG 11540 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:27.333 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /plugins/icheck-bootstrap/icheck-bootstrap.min.css
+2021-11-30 14:55:27.333 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/plugins/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+2021-11-30 14:55:27.336 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:27.339 DEBUG 11540 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:27.578 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /dist/css/adminlte.min.css
+2021-11-30 14:55:27.578 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /dist/css/adminlte.min.css
+2021-11-30 14:55:29.910 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/dist/css/adminlte.min.css", parameters={}
+2021-11-30 14:55:29.913 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:27.598 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /plugins/jquery/jquery.min.js
+2021-11-30 14:55:27.608 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 14:55:29.917 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /plugins/bootstrap/js/bootstrap.bundle.min.js
+2021-11-30 14:55:29.930 DEBUG 11540 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:29.931 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/plugins/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+2021-11-30 14:55:29.933 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /plugins/jquery/jquery.min.js
+2021-11-30 14:55:29.934 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/plugins/jquery/jquery.min.js", parameters={}
+2021-11-30 14:55:29.935 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:29.937 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:29.945 DEBUG 11540 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:29.952 DEBUG 11540 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:29.982 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /dist/js/adminlte.min.js
+2021-11-30 14:55:29.983 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /dist/js/adminlte.min.js
+2021-11-30 14:55:29.984 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/dist/js/adminlte.min.js", parameters={}
+2021-11-30 14:55:29.987 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:29.992 DEBUG 11540 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:30.462 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 14:55:30.463 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff2
+2021-11-30 14:55:30.464 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff2", parameters={}
+2021-11-30 14:55:30.466 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:30.471 DEBUG 11540 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:30.640 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 14:55:30.641 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.woff
+2021-11-30 14:55:30.641 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.woff", parameters={}
+2021-11-30 14:55:30.643 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:30.647 DEBUG 11540 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-11-30 14:55:30.730 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 14:55:30.730 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /plugins/fontawesome-free/webfonts/fa-solid-900.ttf
+2021-11-30 14:55:30.731 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/plugins/fontawesome-free/webfonts/fa-solid-900.ttf", parameters={}
+2021-11-30 14:55:30.734 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-11-30 14:55:30.737 DEBUG 11540 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

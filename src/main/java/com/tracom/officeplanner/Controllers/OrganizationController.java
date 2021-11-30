@@ -52,7 +52,7 @@ public class OrganizationController {
     @RequestMapping("/edit_organization/{org_id}")
     public String showEditOrganization(@PathVariable(name = "org_id") Long org_id, Model model){
         Organization organization = organizationRepository.getOrganizationById(org_id);
-        model.addAttribute("organization", organization);
+        model.addAttribute("organizations", organization);
         return "edit_organization";
     }
 
@@ -68,8 +68,8 @@ public class OrganizationController {
         return "organizations";
     }
 
-//    @ModelAttribute("organizations")
-//    public List<Organization> organizations(){
-//        return organizationRepository.findAll();
-//    }
+    @ModelAttribute("organizations")
+    public List<Organization> organizations(){
+        return organizationRepository.findAll();
+    }
 }

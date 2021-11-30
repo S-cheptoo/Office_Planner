@@ -8,13 +8,13 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}">
     <!-- DataTables -->
-    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
 </head>
 <body>
 <div class="container text-center" th:action="@{/resources}">
@@ -69,6 +69,7 @@
                         <th class="sorting sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"  style="">Resource ID</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Name</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Description</th>
+                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Room</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Edit</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Delete</th>
                     </tr>
@@ -78,6 +79,7 @@
                     <td th:text="${resource.getId()}">Resource ID</td>
                     <td th:text="${resource.getResource_name()}">Name</td>
                     <td th:text="${resource.getResource_description()}">Description</td>
+                    <td th:text="${resource.getRoom()}">Description</td>
                     <td>
                         <a th:href="@{'/edit_resource/' + ${resource.getId()}}" onclick="return confirm('Are you sure you want to edit the resource details?')"><button style='font-size:16px;color:blue'>Edit <i class='fas fa-edit'></i></button></a></td>
                     <td>
@@ -91,6 +93,7 @@
                     <th rowspan="1" colspan="1" style="">Resource ID</th>
                     <th rowspan="1" colspan="1" style="">Name</th>
                     <th rowspan="1" colspan="1" style="">Description</th>
+                    <th rowspan="1" colspan="1" style="">Room</th>
                     <th rowspan="1" colspan="1" style="">Edit</th>
                     <th rowspan="1" colspan="1" style="">Delete</th>
                 </tr>
@@ -146,22 +149,22 @@
 </div>
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
 <!-- DataTables  & Plugins -->
-<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="../../plugins/jszip/jszip.min.js"></script>
-<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
-<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
+<script th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+<script th:src="@{/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+<script th:src="@{/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/dataTables.buttons.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.bootstrap4.min.js}"></script>
+<script th:src="@{/plugins/jszip/jszip.min.js}"></script>
+<script th:src="@{/plugins/pdfmake/pdfmake.min.js}"></script>
+<script th:src="@{/plugins/pdfmake/vfs_fonts.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.html5.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.print.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.colVis.min.js}"></script>
 <!-- Page specific script -->
 <script>
     $(function () {
@@ -179,6 +182,18 @@
             "responsive": true,
         });
     });
+        // $(document).ready(function() {
+        //     var $dataTable = $('#example1').DataTable({
+        //         "ajax": 'api/qnams_all.php',
+        //             "data": data,
+        //         "bDestroy": true,
+        //         "stateSave": true,
+        //         "init": function (){
+        //             $dataTable.ajax.reload();
+        //         }, 30000);
+        //     });
+        // });
+
 </script>
 </body>
 </html>

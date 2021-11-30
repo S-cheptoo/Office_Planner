@@ -75,13 +75,13 @@
                         </thead>
                         <tbody>
                         <tr th:each="organization:${organizations}">
-                            <td th:text="${organization.getId()}"></td>
+                            <td th:text="${organization.getOrg_id()}"></td>
                             <td th:text="${organization.getOrg_name()}"></td>
                             <td th:text="${organization.getOrg_description()}"></td>
                             <td>
-                                <a th:href="@{'/edit_organization/' + ${organization.getId()}}" onclick="return confirm('Are you sure you want to edit the organization details?')"><button style='font-size:16px;color:blue'>Edit <i class='fas fa-edit'></i></button></a></td>
+                                <a th:href="@{'/edit_organization/' + ${organization.getOrg_id()}}" onclick="return confirm('Are you sure you want to edit the organization details?')"><button style='font-size:16px;color:blue'>Edit <i class='fas fa-edit'></i></button></a></td>
                             <td>
-                                <a th:href="@{'/delete_organization/' + ${organization.getId()}}" onclick="return confirm('Are you sure you want to delete the organization?')"><button style='font-size:16px;color:red'>Delete <i class='far fa-trash-alt'></i></button></a>
+                                <a th:href="@{'/delete_organization/' + ${organization.getOrg_id()}}" onclick="return confirm('Are you sure you want to delete the organization?')"><button style='font-size:16px;color:red'>Delete <i class='far fa-trash-alt'></i></button></a>
                             </td>
 
                         </tr>
@@ -146,7 +146,7 @@
 </div>
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<!--<script src="../../plugins/jquery/jquery.min.js"></script>-->
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Office Planner</title>
+    <link rel="stylesheet" th:href="@{/dist/css/style.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+   <link rel="stylsheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div>
+                <a href="https://tracom.co.ke">
+                    <img src="https://tracom.co.ke/wp-content/themes/tracom/images/tracom-logo-blue.svg" alt="Img">
+                </a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li class="active"><a th:href="@{/index}"><i class="fa fa-home"></i>HOME</a></li>
+                    <li><a th:href="@{/about}"><i class="fa fa-user"></i>ABOUT</a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a th:href="@{/c_profile}"><i class="fa fa-angle-right"></i>Corporate Profile</a></li>
+                                <li><a th:href="@{/careers}"><i class="fa fa-angle-right"></i>Careers</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li><a th:href="@{/contact}"><i class="fa fa-phone"></i>CONTACT</a></li>
+                    <li><a th:href="@{/login}">LOGIN</a></li>
+                    <li><a th:href="@{/register}">SIGNUP</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Scheduling Made Easier!</h1>
+            <p>Meeting scheduling has now been made easier for you by Office Planner. Access all your meetings
+            schedules anywhere on any device. <br>Also, get notified on your device whenever you have one.</p>
+            <a th:href="@{/about}" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+<section class="summary">
+    <h1>Summary</h1>
+    <p>Let me brief you on the website details.</p>
+
+    <div class="row">
+        <div class="sum-col">
+            <h3>Organizations</h3>
+            <p>The Office Planner Scheduling System is meant to serve Tracom Services Limited ease meeting planning
+                together with their immediate neighbouring organizations such as Pergamon Group, Right Here, Hudaco e.t.c
+            with whom they share resources such as meeting rooms and parking spaces.</p>
+        </div>
+        <div class="sum-col">
+            <h3>Solution</h3>
+            <p>Scheduling made easy! What do we mean by that?<br>
+             Office Planner provides a platform to keep record of meetings ahead of time as well as manage conflicts between
+            schedules by presenting current meeting room schedules. Users get access on their devices either on mobile or
+                web.</p>
+        </div>
+        <div class="sum-col">
+            <h3>Notifications</h3>
+            <p>Employees and attendees get notified of the meeting schedules via email and or SMS and get reminded of
+            15 minutes prior to the incoming meeting start time.</p>
+        </div>
+    </div>
+</section>
+
+<section class="companies">
+    <h1>Companies</h1>
+    <p>Below are some of the companies that use the system.. </p>
+
+    <div class="row">
+        <div class="companies-col">
+            <img th:src="@{/dist/img/2.jpg}">
+            <div class="layer">
+                <h3>Tracom Services Limited</h3>
+            </div>
+        </div>
+        <div class="companies-col">
+            <img th:src="@{/dist/img/4.jpg}">
+            <div class="layer">
+                <h3>Pergamon Group</h3>
+            </div>
+        </div>
+        <div class="companies-col">
+            <img th:src="@{/dist/img/hudaco.jpg}">
+            <div class="layer">
+                <h3>Hudaco Industries</h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--------Meeting Rooms-------->
+<section class="rooms">
+    <h1>Our Board Rooms</h1>
+    <p>These are some of the meeting rooms at Tracom Servces Limited</p>
+
+    <div class="row">
+        <div class="rooms-col">
+            <img th:src="@{/dist/img/3.jpg}">
+            <h3>Board Room A</h3>
+            <p>The main board room located at Block A with a capacity of 15.</p>
+        </div>
+        <div class="rooms-col">
+            <img th:src="@{/dist/img/productions.jpg}">
+            <h3>Board Room F</h3>
+            <p>This is Block A's main board room with a capacity of 30.</p>
+        </div>
+        <div class="rooms-col">
+            <img th:src="@{/dist/img/6.jpg}">
+            <h3>Board Room B1</h3>
+            <p>This is the academy room located at Block B1 with a capacity of 50.</p>
+        </div>
+    </div>
+</section>
+
+    <section class="testimonials">
+        <h1>What They Had To Say</h1>
+        <p>fslkgtdjbcsrtyikgf</p>
+
+        <div class="row">
+            <div class="testimonials-col">
+                <img th:src="@{/dist/img/avatar2.png}">
+                <div>
+                    <p>Honestly, scheduling events has never been this easier. We can now conveniently access various schedules and I like
+                    the fact that the system is simple, straight-forward and user-friendly</p>
+                    <h3>Elizabeth Q. Zed</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <img th:src="@{/dist/img/user.png}">
+                <div>
+                    <p>This is it! this is what we've always wanted to have. Thank you so much for this tool</p>
+                    <h3>Azah Martins</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----call to action---->
+<section class="cta">
+    <h1></h1>
+</section>
+
+
+
+<script href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script>
+    var navLinks=document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+</script>
+</body>
+</html>

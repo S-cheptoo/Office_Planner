@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
@@ -56,6 +55,16 @@
                 </div>
             </li>
 
+            <ul class="nav navbar-nav navbar-right"
+                sec:authorize="isAuthenticated()">
+                <li class="dropdown"><a class="dropdown-toggle"
+                                        data-toggle="dropdown" href="#" sec:authentication="name"><span
+                        class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{/logout}">Logout</a></li>
+                    </ul></li>
+            </ul>
+
             <li class="nav-item">
                 <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                     <i class="fas fa-expand-arrows-alt"></i>
@@ -73,7 +82,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
+        <a href="" class="brand-link">
 <!--            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
             <span class="brand-text font-weight-light">Admin Page</span>
         </a>
@@ -83,7 +92,7 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="dist/img/user.png" class="img-circle elevation-2" alt="User Image">
+                    <img th:src="@{dist/img/user.png}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">Admin</a>
@@ -109,7 +118,7 @@
                          with font-awesome or any other icon font library -->
                     <li class="nav-item menu-open">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fas fa-home"></i>
                             <p>
                                 Dashboard
 <!--                                <i class="right fas fa-angle-left"></i>-->
@@ -118,37 +127,43 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a th:href="@{/list_users}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="fas fa-users nav-icon"></i>
                                     <p>Users</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a th:href="@{/organizations}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="far fa-building nav-icon"></i>
                                     <p>Organizations</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a th:href="@{/employees}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="fas fa-user-plus nav-icon"></i>
                                     <p>Employees</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a th:href="@{/meeting_page}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                <a th:href="@{/meetings}" class="nav-link">
+                                    <i class="far fa-calendar-alt nav-icon"></i>
                                     <p>Meetings</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a th:href="@{/room}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                <a th:href="@{/rooms}" class="nav-link">
+                                    <i class="fas fa-chalkboard-teacher nav-icon"></i>
                                     <p>Meeting Rooms</p>
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a th:href="@{/departments}" class="nav-link">
+                                    <i class="fas fa-circle nav-icon"></i>
+                                    <p>Departments</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a th:href="@{/resources}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                    <i class="fas fa-clipboard-list nav-icon"></i>
                                     <p>Resources</p>
                                 </a>
                             </li>
@@ -162,13 +177,13 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper" sec:authorize="hasRole('ROLE_ADMIN')">
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Starter Page</h1>
+                        <h1 class="m-0">Admin Home Page</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -184,40 +199,51 @@
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
 
-                                <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.
-                                </p>
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <!-- small card -->
+                                <div class="big-box bg-warning">
+                                    <div class="inner">
+                                        <h3>5</h3>
 
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
+                                        <p>User Registrations</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <a th:href="@{/list_users}" class="small-box-footer">
+                                        More info <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
+                                </div>
                             </div>
+                            <!-- ./col -->
+                            <div class="col-lg-3 col-6">
+                                <!-- small card -->
+                                <div class="small-box bg-success">
+                                    <!-- Loading (remove the following to stop the loading)-->
+                                    <div class="overlay dark">
+                                        <i class="fas fa-3x fa-sync-alt"></i>
+                                    </div>
+                                    <!-- end loading -->
+                                    <div class="inner">
+                                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                                        <p>Bounce Rate</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="ion ion-stats-bars"></i>
+                                    </div>
+                                    <a href="#" class="small-box-footer">
+                                        More info <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- ./col -->
                         </div>
 
-                        <div class="card card-primary card-outline">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
 
-                                <p class="card-text">
-                                    Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.
-                                </p>
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
-                            </div>
-                        </div><!-- /.card -->
-                    </div>
-                    <!-- /.col-md-6 -->
-                    <div class="col-lg-6">
-                    </div>
-                    <!-- /.col-md-6 -->
-                </div>
+
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>
@@ -246,8 +272,6 @@
     </footer>
 </div>
 <!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>

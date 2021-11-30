@@ -1,6 +1,7 @@
 package com.tracom.officeplanner.Services;
 
 import com.tracom.officeplanner.Models.Resource;
+import com.tracom.officeplanner.Models.User;
 import com.tracom.officeplanner.Repository.ResourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,9 @@ public class ResourceService {
         public Resource editResource(long rsc_id)
         {
                 return resourceRepository.getResourceById(rsc_id);
+        }
+
+        public Resource get(Long id){
+                return resourceRepository.getResourceById(id);
         }
 }

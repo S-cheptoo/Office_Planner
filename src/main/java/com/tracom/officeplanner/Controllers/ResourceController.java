@@ -2,9 +2,11 @@ package com.tracom.officeplanner.Controllers;
 
 import com.tracom.officeplanner.Models.Resource;
 import com.tracom.officeplanner.Models.Role;
+import com.tracom.officeplanner.Models.Room;
 import com.tracom.officeplanner.Models.User;
 import com.tracom.officeplanner.Repository.ResourceRepository;
 import com.tracom.officeplanner.Services.ResourceService;
+import com.tracom.officeplanner.Services.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +20,9 @@ public class ResourceController {
     @Autowired
     private ResourceRepository resourceRepository;
     @Autowired
-    private ResourceService resourceService;
+    private final ResourceService resourceService;
+    @Autowired
+    private RoomService roomService;
 
     //    @GetMapping("")
     //    public String showResourcesPage(){
@@ -31,6 +35,9 @@ public class ResourceController {
 
     @GetMapping("/add_resource")
     public String getAddResource(Model model) {
+        List<Room> listRooms = roomService.listRooms();
+        model.addAttribute("rooms", listRooms);
+
         model.addAttribute("resource", new Resource());
         return "add_resource";
     }

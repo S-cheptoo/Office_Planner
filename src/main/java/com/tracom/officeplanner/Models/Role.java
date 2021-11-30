@@ -1,9 +1,8 @@
 package com.tracom.officeplanner.Models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Set;
+
 
 @Entity
 @Table(name = "roles")
@@ -24,7 +23,6 @@ public class Role{
     public Role(String name, Integer id){
         this.id= id;
         this.name=name;
-
     }
     public Role(Integer id){
         this.id=id;

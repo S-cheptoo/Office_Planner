@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Department</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body>
+<div th:replace="fragments/top-navbar :: top-navbar">
+</div>
+<div th:replace="fragments/sidebar :: sidebar"></div>
+
+<div class="container text-center">
+    <h1>Edit Department</h1>
+    <div>
+        <form th:action="@{/update_department}" th:object="${department}" method="post" style="max-width: 600px; margin: 0 auto">
+            <input type="hidden" th:field="*{id}">
+            <div class="form-group row m-3">
+                <label class="col-form-label col-4">Name:</label>
+                <div class="col-8">
+                    <input type="text" class ="form-control"  th:field="*{name}" required/>
+                </div>
+            </div>
+            <div class="form-group row m-3">
+                <label class="col-form-label col-4">Select Room:</label>
+                <div class="col-8">
+                    <select class="form-control" th:field="*{department}" required>
+                        <option th:each="department : ${departments}" th:value="${department.id}" th:text="${department.name}"/>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div>
+    <div th:replace="fragments/footer :: footer"></div>
+</div>
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery UI -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+</body>
+</html>

@@ -2,22 +2,26 @@ package com.tracom.officeplanner.Models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "organizations")
 public class Organization {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "org_id", unique=true, nullable = false)
-    private Long Id;
+    private Long org_id;
     @Column(name = "org_name", unique = true)
     private String org_name;
     @Column(name = "org_description", unique = true)
     private String org_description;
 
-    @OneToMany(cascade = CascadeType.ALL)
-            @JoinColumn(name = "org_id", referencedColumnName = "org_id")
-    List<Employee> employees = new ArrayList<>();
+
+//    @OneToMany(cascade = CascadeType.ALL)
+//            @JoinColumn(name = "org_id", referencedColumnName = "org_id")
+//    List<Employee> employees = new ArrayList<>();
 
     public Organization(){
 
@@ -29,12 +33,12 @@ public class Organization {
         this.org_description = org_description;
     }
 
-    public Long getId() {
-        return Id;
+    public Long getOrg_id() {
+        return org_id;
     }
 
-    public void setId(Long id) {
-        Id = id;
+    public void setOrg_id(Long org_id) {
+        this.org_id = org_id;
     }
 
     public String getOrg_name() {
@@ -53,21 +57,20 @@ public class Organization {
         this.org_description = org_description;
     }
 
-    public List<Employee> getEmployee() {
-        return employees;
-    }
-
-    public void setEmployee(List<Employee> employee) {
-        this.employees = employee;
-    }
+//    public List<Employee> getEmployee() {
+//        return employees;
+//    }
+//
+//    public void setEmployee(List<Employee> employee) {
+//        this.employees = employee;
+//    }
 
     @Override
     public String toString() {
         return "Organization{" +
-                "Id=" + Id +
+                "org_id=" + org_id +
                 ", org_name='" + org_name + '\'' +
                 ", org_description='" + org_description + '\'' +
-                ", employees=" + employees +
                 '}';
     }
 }

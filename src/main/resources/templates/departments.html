@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Departments</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}">
+    <!-- DataTables -->
+    <link rel="stylesheet" th:href="@{/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
+</head>
+<body>
+<div th:replace="fragments/top-navbar :: top-navbar"></div>
+<div>
+
+</div>
+<div th:replace="fragments/sidebar :: sidebar"></div>
+<div class="container text-center" th:action="@{/departments}">
+    <h3>List of All Departments</h3>
+
+    <a th:href="@{/add_department}" align="center">
+        <input type="submit" value="Add New"/>
+    </a>
+</div>
+<br>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Departments DataTable</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6">
+            <div class="dt-buttons btn-group flex-wrap">
+                <button class="btn btn-secondary buttons-copy buttons-html5" tabindex="0" aria-controls="example1" type="button">
+                    <span>Copy</span>
+                </button>
+                <button class="btn btn-secondary buttons-csv buttons-html5" tabindex="0" aria-controls="example1" type="button">
+                    <span>CSV</span>
+                </button>
+                <button class="btn btn-secondary buttons-excel buttons-html5" tabindex="0" aria-controls="example1" type="button">
+                    <span>Excel</span>
+                </button>
+                <button class="btn btn-secondary buttons-pdf buttons-html5" tabindex="0" aria-controls="example1" type="button">
+                    <span>PDF</span>
+                </button>
+                <button class="btn btn-secondary buttons-print" tabindex="0" aria-controls="example1" type="button">
+                    <span>Print</span>
+                </button>
+                <div class="btn-group">
+                    <button class="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis" tabindex="0" aria-controls="example1" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span>Column visibility</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-12 col-md-6">
+                <div id="example1_filter" class="dataTables_filter">
+                    <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="example1" class="table table-bordered table-striped dataTable dtr-inline" aria-describedby="example1_info">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th class="sorting sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"  style="">ID</th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Name</th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Organization</th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Edit</th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style="">Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="department:${departments}">
+                            <td th:text="${department.getId()}">ID</td>
+                            <td th:text="${department.getName()}">Name</td>
+                            <td th:text="${department.getOrganization()}">Organization</td>
+                            <td>
+                                <a th:href="@{'/edit_department/' + ${department.getId()}}" onclick="return confirm('Are you sure you want to edit the department details?')"><button style='font-size:16px;color:blue'>Edit <i class='fas fa-edit'></i></button></a></td>
+                            <td>
+                                <a th:href="@{'/delete_department/' + ${department.getId()}}" onclick="return confirm('Are you sure you want to delete the department?')"><button style='font-size:16px;color:red'>Delete <i class='far fa-trash-alt'></i></button></a>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                        <tfoot class="tfoot-dark">
+                        <tr>
+                            <th rowspan="1" colspan="1" style="">ID</th>
+                            <th rowspan="1" colspan="1" style="">Name</th>
+                            <th rowspan="1" colspan="1" style="">Organization</th>
+                            <th rowspan="1" colspan="1" style="">Edit</th>
+                            <th rowspan="1" colspan="1" style="">Delete</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                        <ul class="pagination"><li class="paginate_button page-item previous disabled" id="example1_previous">
+                            <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous
+                            </a>
+                        </li>
+                            <li class="paginate_button page-item active">
+                                <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6
+                                </a>
+                            </li>
+                            <li class="paginate_button page-item next" id="example1_next">
+                                <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.card-body -->
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+
+<!-- jQuery -->
+<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- DataTables  & Plugins -->
+<script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
+<script th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+<script th:src="@{/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+<script th:src="@{/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/dataTables.buttons.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.bootstrap4.min.js}"></script>
+<script th:src="@{/plugins/jszip/jszip.min.js}"></script>
+<script th:src="@{/plugins/pdfmake/pdfmake.min.js}"></script>
+<script th:src="@{/plugins/pdfmake/vfs_fonts.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.html5.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.print.min.js}"></script>
+<script th:src="@{/plugins/datatables-buttons/js/buttons.colVis.min.js}"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+    // $(document).ready(function() {
+    //     var $dataTable = $('#example1').DataTable({
+    //         "ajax": 'api/qnams_all.php',
+    //             "data": data,
+    //         "bDestroy": true,
+    //         "stateSave": true,
+    //         "init": function (){
+    //             $dataTable.ajax.reload();
+    //         }, 30000);
+    //     });
+    // });
+
+</script>
+</body>
+</html>

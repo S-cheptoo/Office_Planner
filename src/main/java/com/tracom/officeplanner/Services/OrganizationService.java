@@ -32,7 +32,7 @@ public class OrganizationService {
     }
 
     //Editing
-    public Organization editResourceOrganization(long org_id){
+    public Organization editOrganization(long org_id){
         return organizationRepository.getOrganizationById(org_id);
     }
 

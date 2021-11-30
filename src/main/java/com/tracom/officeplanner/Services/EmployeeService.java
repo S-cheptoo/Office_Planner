@@ -1,10 +1,11 @@
 package com.tracom.officeplanner.Services;
 
 import com.tracom.officeplanner.Models.Employee;
-import com.tracom.officeplanner.Models.Resource;
+import com.tracom.officeplanner.Models.User;
 import com.tracom.officeplanner.Repository.EmployeeRepository;
-import com.tracom.officeplanner.Repository.ResourceRepository;
+import com.tracom.officeplanner.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -17,8 +18,15 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     //Save Employee
     public void saveEmployee(Employee employee){
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            String encodedPassword = passwordEncoder.encode(employee.getPassword());
+            employee.setPassword(encodedPassword);
+
         employeeRepository.save(employee);
     }
     //List Employees
@@ -34,4 +42,16 @@ public class EmployeeService {
     {
         return employeeRepository.getEmployeeById(id);
     }
+
+    //finding employee by firstname and lastname
+
+//    public void assignEmail(Long id){
+//        Employee employee = employeeRepository.getEmployeeById(id).orElse(null);
+//        User user = userRepository.findByFirstnameAndLastname(
+//                employee.getEmp_firstname(),
+//                employee.getEmp_lastname()
+//        );
+//        employee.setEmp_email(user.getEmail());
+//        employeeRepository.save(employee);
+//    }
 }
