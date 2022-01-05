@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" >
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-orange navbar-dark">
@@ -55,15 +55,46 @@
                 </div>
             </li>
 
-            <ul class="nav navbar-nav navbar-right"
-                sec:authorize="isAuthenticated()">
-                <li class="dropdown"><a class="dropdown-toggle"
-                                        data-toggle="dropdown" href="#" sec:authentication="name"><span
-                        class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a th:href="@{/logout}">Logout</a></li>
-                    </ul></li>
-            </ul>
+            <li class="dropdown user user-menu open">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                    <img th:src="@{dist/img/user.png}" class="img-circle elevation-2" alt="User Image">
+                    <span class="hidden-xs"><b>[[${#request.userPrincipal.principal.fullName}]]</b></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <!-- User image -->
+                    <li class="user-header">
+                        <img th:src="@{dist/img/user.png}" class="img-circle elevation-2" alt="User Image">
+
+                        <p>
+                            <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+                        </p>
+                    </li>
+                    <!-- Menu Body -->
+                    <li class="user-body">
+                        <div class="row">
+                            <div class="col-xs-4 text-center">
+                                <a href="#"></a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#"></a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </li>
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <div class="pull-left">
+                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -177,7 +208,7 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" sec:authorize="hasRole('ROLE_ADMIN')">
+    <div class="content-wrapper" >
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
@@ -241,9 +272,6 @@
                             </div>
                             <!-- ./col -->
                         </div>
-
-
-
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>

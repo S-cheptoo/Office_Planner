@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+
+<p> Welcome <b><span sec:authentication="firstname">FirstName</span></b></p>
+
+</div>
+</body>
+</html>

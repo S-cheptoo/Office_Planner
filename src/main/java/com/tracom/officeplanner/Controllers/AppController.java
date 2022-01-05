@@ -50,7 +50,7 @@ public class AppController {
     }
 
     @GetMapping("/admin_home")
-    public String ShowAdminPage() {
+    public String showAdminPage() {
         return "admin_home";
     }
 
@@ -169,10 +169,11 @@ public class AppController {
 
 
     @PostMapping("/register_user")
-    public String registerUser(User user, HttpServletRequest request)
+    public String registerUser(Model model, User user, HttpServletRequest request)
             throws UnsupportedEncodingException, MessagingException {
         userService.register(user, getSiteURL(request));
         userService.saveUserWithDefaultRole(user);
+        model.addAttribute("pageTitle", "user Registered Successfully");
         return "redirect:/register_success";
     }
 

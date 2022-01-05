@@ -27,15 +27,13 @@ public class User {
     @Column(nullable = false, length = 50, name = "lastname")
     private String lastname;
 
-    @Column(name="verification_code")
+    @Column(name="verification_code", updatable = false)
     private String verificationCode;
 
-    private boolean enabled;
+    private Boolean enabled;
 
     @Column(name="reset_password_token", nullable = true)
     private String resetPasswordToken;
-    
-
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",

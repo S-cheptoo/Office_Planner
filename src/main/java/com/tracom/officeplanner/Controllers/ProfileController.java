@@ -16,13 +16,13 @@ public class ProfileController {
     private UserService userService;
     @Autowired
     private UserRepository userRepository;
-//
-//    @GetMapping("/profile")
-//    public String showProfilePage(Model model, Principal principal){
-//        String email = principal.getName();
-//        User user = userService.findOne(email);
-//        model.addAttribute("user", userRepository.getUserByEmail(email));
-//
-//        return "userprofile";
-//    }
+
+    @GetMapping("/profile")
+    public String showProfilePage(Model model, Principal principal){
+        String email = principal.getName();
+        User user = userRepository.getUserByEmail(email);
+        model.addAttribute("user", user);
+
+        return "userprofile";
+    }
 }

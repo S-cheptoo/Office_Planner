@@ -13,11 +13,11 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    @Query("SELECT u FROM User u join u.roles r WHERE u.email = :email and r.name='USER'")
-    public List<User> getUserByEmail(@Param("email") String email);
+    @Query("SELECT u FROM User u join u.roles r WHERE u.email = :email and r.name='User'")
+    public User getUserByEmail(@Param("email") String email);
 
-//    Optional<User> findByEmail( String email);
-
+    @Query("SELECT u FROM User u WHERE u.email = ?1")
+    public User findByEmail(String email);
 
     @Query("SELECT u FROM User u WHERE u.id = ?1")
     public User getUserById(@Param("user_id")Integer id);
@@ -31,7 +31,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     public User findByResetPasswordToken(String token);
 
-//    public User findOne(String email);
 
 }
 

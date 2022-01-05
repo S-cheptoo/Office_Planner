@@ -1,4 +1,4 @@
-package com.tracom.officeplanner;
+package com.tracom.officeplanner.Security;
 
 import com.tracom.officeplanner.Models.Role;
 import com.tracom.officeplanner.Models.User;
@@ -6,14 +6,13 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class MyUserDetails implements UserDetails {
-    private static final long serialVersionUID = 1L;
+
     private User user;
+    private List<GrantedAuthority> authorities;
 
     public MyUserDetails(User user){
         this.user = user;
@@ -24,7 +23,7 @@ public class MyUserDetails implements UserDetails {
         Set<Role> roles = user.getRoles();
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
 
-        for (Role role:roles){
+        for (Role role : roles){
             authorities.add(new SimpleGrantedAuthority(role.getName()));
         }
         return authorities ;
@@ -73,6 +72,10 @@ public class MyUserDetails implements UserDetails {
 
     public boolean hasRole(String name) {
         return user.hasRole(name);
+    }
+
+    public User getUser() {
+        return this.user;
     }
 }
 

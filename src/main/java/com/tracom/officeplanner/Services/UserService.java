@@ -11,16 +11,19 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import javax.transaction.Transactional;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @Service
 @Transactional
 public class UserService {
+//    public static  final int MAX_FAILED_ATTEMPTS = 3;
+//    private static  final  long LOCK_TIME_DURATION = 24 * 60 * 1000;
+
     @Autowired
     private RoleRepository roleRepository;
     @Autowired
@@ -34,18 +37,15 @@ public class UserService {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
 
-        Role roleUser =roleRepository.getRoleByName("ROLE_USER");
-        user.addRole(roleUser);
-
         String randomCode = RandomString.make(64);
         user.setVerificationCode(randomCode);
         user.setEnabled(false);
 
-        userRepository.save(user);
+       userRepository.save(user);
 
         sendVerificationEmail(user, siteURL);
-
     }
+
     private void sendVerificationEmail(User user, String siteURL)
         throws MessagingException, UnsupportedEncodingException{
         String toAddress =user.getEmail();
@@ -72,7 +72,6 @@ public class UserService {
         helper.setText(mailContent, true);
 
         mailSender.send(message);
-
     }
 
 
@@ -81,7 +80,7 @@ public class UserService {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
 
-        Role roleUser =roleRepository.getRoleByName("ROLE_USER");
+        Role roleUser =roleRepository.getRoleByName("User");
         user.addRole(roleUser);
         userRepository.save(user);
     }
@@ -92,8 +91,8 @@ public class UserService {
         user.setPassword(encodedPassword);
 
         userRepository.save(user);
-
     }
+
     public boolean verify(String verificationCode){
         User user = userRepository.findByVerificationCode(verificationCode);
 
@@ -152,6 +151,7 @@ public class UserService {
     public User getResetPasswordToken(String token){
         return userRepository.findByResetPasswordToken(token);
     }
+
     public void updatePasswordResetToken(User user,String email){
         BCryptPasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(user.getPassword());
